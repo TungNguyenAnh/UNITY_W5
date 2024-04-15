@@ -1,20 +1,20 @@
-﻿int[] mangSo = { 5, 2, 4, 1, 3 };
-int viTriSoNhoNhat = TimIndexSoNhoNhat(mangSo);
-Console.WriteLine("Chỉ mục của số nhỏ nhất: " + viTriSoNhoNhat);
+﻿int[] arr = { 5, 2, 4, 1, 3 };
+int index = TimIndexSoNhoNhat(arr);
+Console.WriteLine("Chỉ mục của số nhỏ nhất: " + index);
 
-int TimIndexSoNhoNhat(int[] mangSo)
+int TimIndexSoNhoNhat(int[] arr)
 {
-    int viTriSoNhoNhat = 0;
-    int soNhoNhat = mangSo[0];
+    int index = 0;
+    int min = arr[0];
 
-    for (int i = 1; i < mangSo.Length; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
-        if (mangSo[i] < soNhoNhat)
+        if (arr[i] < min)
         {
-            soNhoNhat = mangSo[i];
-            viTriSoNhoNhat = i;
+            min = arr[i];
+            index = i;
         }
     }
 
-    return viTriSoNhoNhat;
+    return index;
 }
